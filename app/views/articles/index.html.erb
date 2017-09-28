@@ -1,0 +1,46 @@
+<h1 align="center">Listing all Notes</h1>
+
+
+<p>
+
+<%= link_to "Create new article", new_article_path %>
+
+</p>
+
+<table>
+
+<tr>
+
+<th>Title</th>
+
+<th>Description</th>
+
+</tr>
+
+<% @articles.each do |article| %>
+
+<tr>
+
+<td><%= article.title %></td>
+<td><%= article.lastname %></td>
+<td><%= article.firstname %></td>
+<td><%= article.age %></td>
+<td><%= article.sex %></td>
+<td><%= article.diagnosis %></td>
+<td><%= article.subjective %></td>
+<td><%= article.current_tx %></td>
+<td><%= article.description %></td>
+<td><%= article.goals %></td>
+<td><%= article.plan %></td>
+
+<td><%= article.description %></td>
+
+<td><%= link_to 'Edit', edit_article_path(article) %></td>
+
+<td><%= link_to 'Show', article_path(article) %></td>
+
+</tr>
+
+<% end %>
+
+</table>

@@ -1,0 +1,105 @@
+
+<% if @article.errors.any? %>
+
+<h2>The following errors prevented the article from getting created</h2>
+
+<ul>
+
+<% @article.errors.full_messages.each do |msg| %>
+
+<li><%= msg %></li>
+
+<% end %>
+
+</ul>
+
+<% end %>
+
+<%= form_for @article do |f| %>
+
+<p>
+
+<%= f.label :title %><br/>
+
+<%= f.text_field :title %>
+
+</p>
+
+<p>
+
+<%= f.label :lastname %><br/>
+
+<%= f.text_field :lastname %>
+
+</p>
+<p>
+
+<%= f.label :firstname %><br/>
+
+<%= f.text_field :firstname %>
+
+</p>
+<p>
+
+<%= f.label :age %><br/>
+
+<%= f.text_field :age %>
+
+</p>
+<p>
+
+<%= f.label :sex %><br/>
+
+<%= f.text_field :sex %>
+
+</p>
+<p>
+
+<%= f.label :diagnosis %><br/>
+
+<%= f.text_area :diagnosis %>
+
+</p>
+<p>
+
+<%= f.label :subjective %><br/>
+
+<%= f.text_area :subjective%>
+
+</p>
+<p>
+
+<%= f.label :current_tx %><br/>
+
+<%= f.text_area :current_tx %>
+
+</p>
+<p>
+
+<%= f.label :description %><br/>
+
+<%= f.text_area :description %>
+
+</p>
+<p>
+
+<%= f.label :goals %><br/>
+
+<%= f.text_area :goals %>
+
+</p>
+<p>
+
+<%= f.label :plan %><br/>
+
+<%= f.text_area :plan %>
+
+</p>
+<p>
+
+<%= f.submit %>
+
+</p>
+
+<% end %>
+<%= link_to "Back to articles listing", articles_path %>
